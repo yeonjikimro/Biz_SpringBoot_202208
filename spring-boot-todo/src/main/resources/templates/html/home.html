@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h1>come back~~~~~!!!!</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>작성 날짜</th>
+            <th>내용</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="todo:${todo}">
+        <tr>
+            <td>${todo.date}</td>
+            <td>${todo.context}</td>
+        </tr>
+    </th:each>
+    </tbody>
+</table>
+<form action="post">
+    <input name="context" placeholder="할 일을 입력하세요" value="${todo.context}">
+    <button type="submit">등록</button>
+</form>
+
+
+</body>
+</html>
